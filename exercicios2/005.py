@@ -18,3 +18,5 @@ mapa.update_layout(mapbox_style='open-street-map')
 mapa.update_layout(height=600, margin={'r': 0, 't': 0, 'l': 0, 'b': 0})
 # right, top, left, bottom
 mapa.show()
+
+mapa.write_html('../datasets/mapa_house_rocket.html')
