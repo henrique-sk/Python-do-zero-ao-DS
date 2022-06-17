@@ -5,6 +5,7 @@ data = pd.read_csv('../datasets/kc_house_data.csv')
 data['level'] = 'standard'
 data.loc[data['price'] > 540000, 'level'] = 'high level'
 data.loc[data['price'] <= 540000, 'level'] = 'low level'
+dceo = data.to_csv('../datasets/kc_house_data_ceo.csv', index=False)
 
 # Gostaria de um relatório ordenado pelo preço e  contendo as seguintes informações:
 # (id do imóvel,

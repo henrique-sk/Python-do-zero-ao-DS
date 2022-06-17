@@ -7,4 +7,4 @@ data = pd.read_csv('../datasets/kc_house_data.csv')
 
 data['date'] = pd.to_datetime(data['date'])
 print(data['date'].dtypes)
-print(data.sort_values('date', ascending=True))
+print(data.sort_values('date', ascending=True).head(1))
