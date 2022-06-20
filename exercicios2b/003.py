@@ -14,6 +14,6 @@ dceo.loc[dceo['condition'] <= 2, 'condition_type'] = 'bad'
 dceo.loc[(dceo['condition'] == 3) | (dceo['condition'] == 4), 'condition_type'] = 'regular'
 dceo.loc[dceo['condition'] == 5, 'condition_type'] = 'good'
 
-dceo.to_csv('../datasets/report_aula02.csv', index=False)
+change = dceo.to_csv('../datasets/kc_house_data_ceo.csv', index=False)
 
 print(dceo[['condition', 'condition_type']].sample(5))
