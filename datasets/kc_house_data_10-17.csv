@@ -1,0 +1,9 @@
+id,date,price,bedrooms,bathrooms,sqft_living,sqft_lot,floors,waterfront,view,condition,grade,sqft_above,sqft_basement,yr_built,yr_renovated,zipcode,lat,long,level,house_age,dormitory_type,condition_type
+1736800520,2015-04-03,662500.0,3,2.5,3560,9796,1.0,0,0,3,8,1860,1700,1965-01-01,,98007,47.6007,-122.145,high level,new_house,house,regular
+9212900260,2014-05-27,468000.0,2,1.0,1160,6000,1.0,0,0,4,7,860,300,1942-01-01,,98115,47.69,-122.292,low level,new_house,apartament,regular
+114101516,2014-05-28,310000.0,3,1.0,1430,19901,1.5,0,0,4,7,1430,0,1927-01-01,,98028,47.7558,-122.229,low level,new_house,house,regular
+6054650070,2014-10-07,400000.0,3,1.75,1370,9680,1.0,0,0,4,7,1370,0,1977-01-01,,98074,47.6127,-122.045,low level,new_house,house,regular
+1175000570,2015-03-12,530000.0,5,2.0,1810,4850,1.5,0,0,3,7,1810,0,1900-01-01,,98107,47.67,-122.394,low level,new_house,house,regular
+9297300055,2015-01-24,650000.0,4,3.0,2950,5000,2.0,0,3,3,9,1980,970,1979-01-01,,98126,47.5714,-122.375,high level,new_house,house,regular
+1875500060,2014-07-31,395000.0,3,2.0,1890,14040,2.0,0,0,3,7,1890,0,1994-01-01,,98019,47.7277,-121.962,low level,new_house,house,regular
+6865200140,2014-05-29,485000.0,4,1.0,1600,4300,1.5,0,0,4,7,1600,0,1916-01-01,,98103,47.6648,-122.343,low level,new_house,house,regular

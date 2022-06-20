@@ -2,10 +2,11 @@ import pandas as pd
 
 dceo = pd.read_csv('../datasets/kc_house_data_ceo.csv')
 
-# Delete as colunas: “sqft_living” e “sqft_lot15”
+# Modifique o TIPO da coluna “yr_built” para DATE
 # R:
 
-print(dceo[['sqft_living', 'sqft_lot15']].sample(5))
-dceo = dceo.drop(columns=['sqft_living', 'sqft_lot15'])
+dceo['yr_built'] = pd.to_datetime(dceo['yr_built'], format='%Y', errors='coerce')
+print(dceo.dtypes)
+print(dceo[['yr_built', 'yr_renovated']].head())
 
 change = dceo.to_csv('../datasets/kc_house_data_ceo.csv', index=False)
