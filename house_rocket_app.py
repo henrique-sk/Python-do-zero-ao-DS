@@ -1,9 +1,9 @@
 import pandas as pd
-
+import numpy as np
 import streamlit as st
+import plotly.express as px
 
 st.title("House Rocket Company")
-
 st.markdown('Welcome to House Rocket Data Analysis')
 
 st.header('Load data')
@@ -21,10 +21,35 @@ data = get_data('datasets/kc_house_data.csv')
 
 st.dataframe(data.head())
 
-# filter_bedrooms
-bedrooms = st.sidebar.multiselect(
-    'Number of Bedrooms',
-    data['bedrooms'].unique()
-)
+# plot map
+st.title('House Rocket Map')
+is_check = st.checkbox('Display Map')
 
-#data_dimension
+#filters
+price_min = int(data['price'].min())
+price_max = int(data['price'].max())
+price_avg = int(data['price'].mean())
+
+price_slider = st.slider('Price Range',
+                         price_min,
+                         price_max,
+                         price_avg)
+
+if is_check:
+    # select rows
+    houses = data[data['price'] < price_slider][['id', 'lat', 'long', 'price']]
+
+    st.dataframe(houses)
+
+    #draw map
+    fig = px.scatter_mapbox(houses,
+                            lat='lat',
+                            lon='long',
+                            size='price',
+                            color_continuous_scale=px.colors.cyclical.IceFire,
+                            size_max=15,
+                            zoom=10)
+
+    fig.update_layout(mapbox_style='open-street-map')
+    fig.update_layout(height=600, margin={'r': 0, 'l': 0, 'b': 0, 't': 0})
+    fig.show()
