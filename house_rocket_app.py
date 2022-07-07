@@ -39,8 +39,6 @@ if is_check:
     # select rows
     houses = data[data['price'] < price_slider][['id', 'lat', 'long', 'price']]
 
-    st.dataframe(houses)
-
     #draw map
     fig = px.scatter_mapbox(houses,
                             lat='lat',
@@ -52,4 +50,4 @@ if is_check:
 
     fig.update_layout(mapbox_style='open-street-map')
     fig.update_layout(height=600, margin={'r': 0, 'l': 0, 'b': 0, 't': 0})
-    fig.show()
+    st.plotly_chart(fig)
